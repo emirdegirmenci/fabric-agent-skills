@@ -1,0 +1,54 @@
+{
+  "name": "fabric-agent-skills",
+  "metadata": {
+    "description": "Agent Skills for Microsoft Fabric — connecting, loading and modeling, with rules measured against a live environment",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "fabric-agent-skills contributors"
+  },
+  "plugins": [
+    {
+      "name": "fabric-agent-skills",
+      "source": "./",
+      "description": "Connect code to Microsoft Fabric, load Lakehouse and Warehouse tables, and model schemas — three skills covering service-principal auth, OneLake Delta, the SQL analytics endpoint, incremental load patterns, OPTIMIZE/VACUUM and naming conventions.",
+      "version": "1.0.0",
+      "skills": [
+        "./skills/connecting-to-fabric",
+        "./skills/loading-fabric-tables",
+        "./skills/modeling-fabric-warehouses"
+      ],
+      "keywords": [
+        "microsoft-fabric",
+        "fabric",
+        "onelake",
+        "delta-lake",
+        "lakehouse",
+        "data-warehouse",
+        "sql-analytics-endpoint",
+        "warehouse",
+        "t-sql",
+        "service-principal",
+        "entra-id",
+        "abfss",
+        "delta-rs",
+        "sqlcmd",
+        "pyodbc",
+        "medallion-architecture",
+        "incremental-load",
+        "upsert",
+        "merge",
+        "optimize",
+        "vacuum",
+        "v-order",
+        "data-modeling",
+        "naming-conventions",
+        "etl",
+        "data-engineering",
+        "agent-skills",
+        "claude-code"
+      ],
+      "license": "MIT"
+    }
+  ]
+}

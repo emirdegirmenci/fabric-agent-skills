@@ -1,0 +1,18 @@
+# Secrets — never commit
+.env
+*.env
+!.env.example
+
+# Downloaded binaries (see requirements.txt for install instructions)
+tools/
+
+# Generated inventories may contain real schema and table names
+inventory/
+inventory_*/
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.log
+.DS_Store

@@ -1,0 +1,5 @@
+# Normalise line endings so contributors on Windows, macOS and Linux see no diff noise.
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
