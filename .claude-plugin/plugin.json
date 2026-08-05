@@ -1,0 +1,33 @@
+{
+  "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
+  "name": "fabric-agent-skills",
+  "description": "Agent Skills for Microsoft Fabric — connect code to Fabric, load Lakehouse/Warehouse tables, and model schemas. Three skills covering service-principal auth, OneLake Delta, the SQL analytics endpoint, incremental/upsert loads, OPTIMIZE/VACUUM, and naming conventions, with rules measured against a live environment.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Emir Degirmenci",
+    "url": "https://github.com/emirdegirmenci"
+  },
+  "homepage": "https://github.com/emirdegirmenci/fabric-agent-skills",
+  "repository": "https://github.com/emirdegirmenci/fabric-agent-skills",
+  "license": "MIT",
+  "keywords": [
+    "microsoft-fabric",
+    "fabric",
+    "onelake",
+    "delta-lake",
+    "lakehouse",
+    "data-warehouse",
+    "sql-analytics-endpoint",
+    "t-sql",
+    "service-principal",
+    "entra-id",
+    "delta-rs",
+    "medallion-architecture",
+    "incremental-load",
+    "data-engineering",
+    "agent-skills",
+    "claude-code",
+    "claude-code-plugin"
+  ],
+  "skills": "./skills/"
+}

@@ -2,6 +2,14 @@
 
 **Agent Skills for Microsoft Fabric — connect, load, and model, with rules measured against a live environment rather than copied from documentation.**
 
+[![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-D97757?logo=anthropic&logoColor=white)](https://docs.claude.com/en/docs/claude-code)
+[![Agent Skills](https://img.shields.io/badge/Agent_Skills-standard-1f6feb)](https://agentskills.io)
+[![Microsoft Fabric](https://img.shields.io/badge/Microsoft-Fabric-117865?logo=microsoft&logoColor=white)](https://www.microsoft.com/microsoft-fabric)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](https://github.com/emirdegirmenci/fabric-agent-skills/releases)
+
+`#microsoft-fabric` · `#onelake` · `#delta-lake` · `#lakehouse` · `#data-engineering` · `#agent-skills` · `#claude-code`
+
 Three skills that teach a coding agent (Claude Code, Cursor, GitHub Copilot CLI, Codex, or anything supporting the [Agent Skills](https://agentskills.io) standard) how to work with Microsoft Fabric without the usual two days of trial and error.
 
 ```
