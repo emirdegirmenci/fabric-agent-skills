@@ -1,0 +1,45 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Claude Code CLI
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Validate plugin manifest and components
+        run: |
+          claude plugin validate --strict .
+          for dir in skills agents commands; do
+            if [ -d "$dir" ]; then claude plugin validate --strict "$dir"; fi
+          done
+
+      - name: Plugin and marketplace versions match
+        run: |
+          python - <<'PY'
+          import json
+          plugin = json.load(open(".claude-plugin/plugin.json", encoding="utf-8"))
+          market = json.load(open(".claude-plugin/marketplace.json", encoding="utf-8"))
+          entry = next(p for p in market["plugins"] if p["name"] == plugin["name"])
+          assert entry["version"] == plugin["version"], (entry["version"], plugin["version"])
+          print(f"{plugin['name']} {plugin['version']}")
+          PY
+
+      - name: Compile Python scripts
+        run: python -m compileall -q -x '/\.git/' .
